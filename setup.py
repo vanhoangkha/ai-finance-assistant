@@ -14,7 +14,7 @@ setup(
     description="A comprehensive AI-powered financial analysis platform",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/your-username/ai-finance-assistant",
+    url="https://github.com/vanhoangkha/ai-finance-assistant",
     packages=find_packages(),
     classifiers=[
         "Development Status :: 4 - Beta",

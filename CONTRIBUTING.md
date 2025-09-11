@@ -19,9 +19,9 @@ We use GitHub to sync code, track issues and feature requests, as well as accept
 
 In short, when you submit code changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project.
 
-## Report bugs using GitHub's [issue tracker](https://github.com/your-username/ai-finance-assistant/issues)
+## Report bugs using GitHub's [issue tracker](https://github.com/vanhoangkha/ai-finance-assistant/issues)
 
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/your-username/ai-finance-assistant/issues/new).
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/vanhoangkha/ai-finance-assistant/issues/new).
 
 ## Write bug reports with detail, background, and sample code
 
@@ -39,7 +39,7 @@ We use GitHub issues to track public bugs. Report a bug by [opening a new issue]
 
 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/ai-finance-assistant.git
+git clone https://github.com/vanhoangkha/ai-finance-assistant.git
 cd ai-finance-assistant
 ```
 

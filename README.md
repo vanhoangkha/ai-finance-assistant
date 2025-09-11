@@ -65,7 +65,7 @@ ai-finance-assistant/
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/your-username/ai-finance-assistant.git
+git clone https://github.com/vanhoangkha/ai-finance-assistant.git
 cd ai-finance-assistant
 ```
 
@@ -262,8 +262,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - 📧 Email: contact@ai-finance-assistant.com
-- 🐛 Issues: [GitHub Issues](https://github.com/your-username/ai-finance-assistant/issues)
-- 📖 Documentation: [Wiki](https://github.com/your-username/ai-finance-assistant/wiki)
+- 🐛 Issues: [GitHub Issues](https://github.com/vanhoangkha/ai-finance-assistant/issues)
+- 📖 Documentation: [Wiki](https://github.com/vanhoangkha/ai-finance-assistant/wiki)
 
 ---
 
