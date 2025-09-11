@@ -1,0 +1,61 @@
+# SEO Keywords for AI Finance Assistant
+
+## Primary Keywords
+- AI finance assistant
+- financial analysis platform
+- stock market analysis
+- technical indicators
+- trading signals
+- investment insights
+- real-time stock data
+- AWS Bedrock integration
+- machine learning finance
+- automated trading analysis
+
+## Secondary Keywords
+- Python financial tools
+- Streamlit finance app
+- stock price prediction
+- market sentiment analysis
+- portfolio optimization
+- risk assessment tools
+- financial data visualization
+- algorithmic trading
+- quantitative analysis
+- fintech application
+
+## Long-tail Keywords
+- AI-powered stock market analysis tool
+- real-time financial data analysis platform
+- automated technical analysis software
+- machine learning trading signals
+- AWS Bedrock financial assistant
+- Python stock market dashboard
+- Streamlit financial analysis app
+- AI investment recommendation system
+- automated portfolio management tool
+- financial document analysis AI
+
+## Technical Keywords
+- RSI indicator analysis
+- MACD trading signals
+- moving averages calculation
+- Bollinger bands strategy
+- support resistance levels
+- candlestick pattern recognition
+- volume analysis tools
+- price action analysis
+- trend following indicators
+- momentum oscillators
+
+## Industry Keywords
+- fintech
+- algorithmic trading
+- quantitative finance
+- financial technology
+- investment analysis
+- market research
+- trading automation
+- financial modeling
+- risk management
+- portfolio analytics

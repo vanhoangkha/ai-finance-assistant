@@ -5,38 +5,50 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io/)
 [![AWS Bedrock](https://img.shields.io/badge/AWS-Bedrock-orange.svg)](https://aws.amazon.com/bedrock/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
+[![CI/CD](https://github.com/vanhoangkha/ai-finance-assistant/workflows/CI/CD%20Pipeline/badge.svg)](https://github.com/vanhoangkha/ai-finance-assistant/actions)
+[![Code Quality](https://img.shields.io/badge/code%20quality-A-brightgreen.svg)](https://github.com/vanhoangkha/ai-finance-assistant)
+[![Security](https://img.shields.io/badge/security-A+-brightgreen.svg)](https://github.com/vanhoangkha/ai-finance-assistant/security)
 
-A comprehensive AI-powered financial analysis platform built with Streamlit and AWS Bedrock, providing real-time stock analysis, technical indicators, and AI-driven insights.
+> **AI-Powered Financial Analysis Platform** | **Real-Time Stock Analysis** | **Technical Indicators** | **AWS Bedrock Integration** | **Machine Learning Trading Signals**
 
-## ✨ Features
+A comprehensive **AI-powered financial analysis platform** built with **Streamlit** and **AWS Bedrock**, providing **real-time stock analysis**, **technical indicators**, **trading signals**, and **AI-driven investment insights** for modern traders and financial analysts.
 
-### 💬 AI Chat Interface
-- General financial consultation with AWS Bedrock Claude Sonnet
-- Natural language processing for financial queries
-- Context-aware responses with market insights
+## 🌟 Key Features & Capabilities
 
-### 📈 Advanced Technical Analysis
-- Real-time stock charts with interactive indicators
-- RSI, MACD, Moving Averages, Bollinger Bands
+### 💬 **AI Financial Consultation**
+- **Natural Language Processing** for financial queries
+- **AWS Bedrock Claude Sonnet** integration
+- **Context-aware responses** with market insights
+- **Real-time financial advice** and recommendations
+
+### 📈 **Advanced Technical Analysis**
+- **Real-time stock charts** with interactive indicators
+- **RSI, MACD, Moving Averages, Bollinger Bands**
 - **AI-powered technical analysis** with professional insights
-- Support/Resistance level identification
-- Trading signals and recommendations
+- **Support/Resistance level identification**
+- **Trading signals and buy/sell recommendations**
+- **Pattern recognition** and trend analysis
 
-### 💹 Comprehensive Stock Information
-- Real-time stock data from Polygon.io
-- Company fundamentals and financial ratios
-- Market performance analysis
-- Top 10 US stocks integration
+### 💹 **Comprehensive Stock Information**
+- **Real-time stock data** from Polygon.io API
+- **Company fundamentals** and financial ratios
+- **Market performance analysis** and metrics
+- **Top 10 US stocks** integration (AAPL, GOOGL, MSFT, AMZN, TSLA, META, NVDA)
+- **Historical price data** and volume analysis
 
-### 🤖 Intelligent AI Assistant
-- Advanced stock analysis with AI tools
-- Real-time price fetching and market summaries
-- Professional trading insights and recommendations
+### 🤖 **Intelligent AI Assistant**
+- **Advanced stock analysis** with AI tools
+- **Real-time price fetching** and market summaries
+- **Professional trading insights** and recommendations
+- **Risk assessment** and portfolio optimization
+- **Market sentiment analysis**
 
-### 📄 Document Intelligence
-- PDF/text document summarization
-- Document Q&A with AI
-- URL content analysis and insights
+### 📄 **Document Intelligence & Analysis**
+- **PDF/text document summarization**
+- **Document Q&A** with AI
+- **URL content analysis** and insights
+- **Financial report processing**
+- **Earnings call transcription analysis**
 
 ## 🏗️ Architecture
 
