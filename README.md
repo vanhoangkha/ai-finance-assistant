@@ -1,4 +1,4 @@
-# 🚀 AI Finance Assistant
+# AI Finance Assistant
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -13,15 +13,15 @@
 
 A comprehensive **AI-powered financial analysis platform** built with **Streamlit** and **AWS Bedrock**, providing **real-time stock analysis**, **technical indicators**, **trading signals**, and **AI-driven investment insights** for modern traders and financial analysts.
 
-## 🌟 Key Features & Capabilities
+## Key Features & Capabilities
 
-### 💬 **AI Financial Consultation**
+### **AI Financial Consultation**
 - **Natural Language Processing** for financial queries
 - **AWS Bedrock Claude Sonnet** integration
 - **Context-aware responses** with market insights
 - **Real-time financial advice** and recommendations
 
-### 📈 **Advanced Technical Analysis**
+### **Advanced Technical Analysis**
 - **Real-time stock charts** with interactive indicators
 - **RSI, MACD, Moving Averages, Bollinger Bands**
 - **AI-powered technical analysis** with professional insights
@@ -29,42 +29,42 @@ A comprehensive **AI-powered financial analysis platform** built with **Streamli
 - **Trading signals and buy/sell recommendations**
 - **Pattern recognition** and trend analysis
 
-### 💹 **Comprehensive Stock Information**
+### **Comprehensive Stock Information**
 - **Real-time stock data** from Polygon.io API
 - **Company fundamentals** and financial ratios
 - **Market performance analysis** and metrics
 - **Top 10 US stocks** integration (AAPL, GOOGL, MSFT, AMZN, TSLA, META, NVDA)
 - **Historical price data** and volume analysis
 
-### 🤖 **Intelligent AI Assistant**
+### **Intelligent AI Assistant**
 - **Advanced stock analysis** with AI tools
 - **Real-time price fetching** and market summaries
 - **Professional trading insights** and recommendations
 - **Risk assessment** and portfolio optimization
 - **Market sentiment analysis**
 
-### 📄 **Document Intelligence & Analysis**
+### **Document Intelligence & Analysis**
 - **PDF/text document summarization**
 - **Document Q&A** with AI
 - **URL content analysis** and insights
 - **Financial report processing**
 - **Earnings call transcription analysis**
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ai-finance-assistant/
-├── 📱 app.py                 # Main Streamlit application
-├── 🧠 base.py                # Core functions and configurations
-├── 📊 libs.py                # AWS Bedrock and utility libraries
-├── 📄 pages/                 # Streamlit pages
-├── 📊 data/                  # Stock data and CSV files
-├── 🔧 scripts/              # Utility scripts and API clients
-├── ⚙️ config/               # Configuration and Docker files
-└── 📚 docs/                 # Documentation
+├── app.py # Main Streamlit application
+├── base.py # Core functions and configurations
+├── libs.py # AWS Bedrock and utility libraries
+├── pages/ # Streamlit pages
+├── data/ # Stock data and CSV files
+├── scripts/ # Utility scripts and API clients
+├── config/ # Configuration and Docker files
+└── docs/ # Documentation
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -127,7 +127,7 @@ make run
 make docker-run
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -157,7 +157,7 @@ DEBUG=false
    - Free tier available with rate limits
    - Paid plans for higher limits
 
-## 📊 Data Management
+## Data Management
 
 ### Fetch Latest Stock Data
 ```bash
@@ -183,7 +183,7 @@ make update-tickers
 - META (Meta Platforms Inc.)
 - NVDA (NVIDIA Corporation)
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 ### Development
 ```bash
@@ -208,7 +208,7 @@ docker compose -f config/docker-compose.yml ps
 docker compose -f config/docker-compose.yml logs -f
 ```
 
-## 🧪 Development
+## Development
 
 ### Setup Development Environment
 ```bash
@@ -240,7 +240,7 @@ make test
 - **Type Safety**: Type hints and validation where applicable
 - **Documentation**: Inline documentation and docstrings
 
-## 📱 Usage
+## Usage
 
 1. **Access the application**: http://localhost:8501
 2. **Select analysis type**: Technical Analysis or Stock Information
@@ -248,7 +248,7 @@ make test
 4. **Generate AI insights**: Click "Generate AI Analysis"
 5. **Explore features**: Chat, document analysis, and more
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
@@ -260,25 +260,25 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for deta
 5. Run quality checks: `make lint test`
 6. Submit a pull request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **AWS Bedrock** for AI capabilities
 - **Polygon.io** for market data
 - **Streamlit** for the web framework
 - **Technical Analysis Library** for indicators
 
-## 📞 Support
+## Support
 
-- 📧 Email: contact@ai-finance-assistant.com
-- 🐛 Issues: [GitHub Issues](https://github.com/vanhoangkha/ai-finance-assistant/issues)
-- 📖 Documentation: [Wiki](https://github.com/vanhoangkha/ai-finance-assistant/wiki)
+- Email: contact@ai-finance-assistant.com
+- Issues: [GitHub Issues](https://github.com/vanhoangkha/ai-finance-assistant/issues)
+- Documentation: [Wiki](https://github.com/vanhoangkha/ai-finance-assistant/wiki)
 
 ---
 
-**⚠️ Disclaimer**: This tool is for educational and informational purposes only. Not financial advice. Always consult with qualified financial professionals before making investment decisions.
+**Disclaimer**: This tool is for educational and informational purposes only. Not financial advice. Always consult with qualified financial professionals before making investment decisions.
 
-**Built with ❤️ using Streamlit, AWS Bedrock, and Polygon.io**
+**Built with using Streamlit, AWS Bedrock, and Polygon.io**
