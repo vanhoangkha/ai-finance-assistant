@@ -27,28 +27,28 @@
 ## Social Media Posts
 
 ### LinkedIn
-🚀 Excited to share my latest project: AI Finance Assistant!
+Excited to share my latest project: AI Finance Assistant!
 
 A comprehensive financial analysis platform that combines:
-✅ Real-time stock data from Polygon.io
-✅ AI-powered analysis with AWS Bedrock
-✅ Advanced technical indicators (RSI, MACD, Bollinger Bands)
-✅ Machine learning trading signals
-✅ Interactive Streamlit dashboard
+Real-time stock data from Polygon.io
+AI-powered analysis with AWS Bedrock
+Advanced technical indicators (RSI, MACD, Bollinger Bands)
+Machine learning trading signals
+Interactive Streamlit dashboard
 
 Perfect for traders, analysts, and fintech enthusiasts!
 
 #AI #Finance #MachineLearning #Fintech #StockAnalysis #AWS #Python #OpenSource
 
 ### Twitter
-🔥 Just launched AI Finance Assistant - an open-source platform for AI-powered stock analysis!
+Just launched AI Finance Assistant - an open-source platform for AI-powered stock analysis!
 
 Features:
-📊 Real-time market data
-🤖 AWS Bedrock AI integration  
-📈 Technical analysis tools
-⚡ Trading signals
-🐳 Docker ready
+Real-time market data
+AWS Bedrock AI integration
+Technical analysis tools
+Trading signals
+Docker ready
 
 Check it out: https://github.com/vanhoangkha/ai-finance-assistant
 
