@@ -260,7 +260,7 @@ def init_slidebar():
       )
       
       st.sidebar.button(
-          "🗑 Clear Chat History",
+          "Clear Chat History",
           on_click=clear_chat_history,
           key="sidebar_clear_chat_history",
       )
@@ -298,7 +298,7 @@ def right_message(st, message):
             <div style="text-align: right;">
                 {message}
             </div>
-            <span style="font-size: 40px; margin-left: 10px;">👤</span>
+            <span style="font-size: 40px; margin-left: 10px;"></span>
         </div>
         """,
         unsafe_allow_html=True

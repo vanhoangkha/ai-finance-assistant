@@ -60,7 +60,7 @@ st.markdown("""
 # Header
 st.markdown("""
 <div class="main-header">
-    <h1>🤖 AI Stock Assistant</h1>
+    <h1>AI Stock Assistant</h1>
     <p>Advanced AI agent with real-time market data and analysis tools</p>
 </div>
 """, unsafe_allow_html=True)
@@ -102,7 +102,7 @@ def get_stock_price(symbol):
         df = client.get_stock_data(symbol, days=5)
         
         if df is None or df.empty:
-            return f"📊 **{symbol.upper()}**\n\n❌ No current price data available."
+            return f"**{symbol.upper()}**\n\nNo current price data available."
         
         # Get current price
         current_price = df['Close'].iloc[-1]
@@ -125,23 +125,23 @@ def get_stock_price(symbol):
         return f"""
 {change_indicator} **{symbol.upper()} - {company_name}**
 
-💰 **Current Price**: ${current_price:.2f}
-📊 **Change**: ${change:+.2f} ({change_pct:+.2f}%)
-🏢 **Market Cap**: ${market_cap:,.0f}
-📈 **Volume**: {volume:,.0f}
-📅 **Data from**: {df.index[-1].strftime('%Y-%m-%d') if hasattr(df.index[-1], 'strftime') else 'Recent'}
+**Current Price**: ${current_price:.2f}
+**Change**: ${change:+.2f} ({change_pct:+.2f}%)
+**Market Cap**: ${market_cap:,.0f}
+**Volume**: {volume:,.0f}
+**Data from**: {df.index[-1].strftime('%Y-%m-%d') if hasattr(df.index[-1], 'strftime') else 'Recent'}
 
 *Powered by Polygon.io*
         """
         
     except Exception as e:
         return f"""
-📊 **{symbol.upper()} Stock Lookup**
+**{symbol.upper()} Stock Lookup**
 
-❌ **Error**: Unable to fetch real-time data
-🔧 **Reason**: {str(e)[:100]}...
+**Error**: Unable to fetch real-time data
+**Reason**: {str(e)[:100]}...
 
-💡 **Try**: 
+**Try**: 
 - Different stock symbol (AAPL, MSFT, GOOGL)
 - Check if market is open
 - Try again in a few moments
@@ -150,7 +150,7 @@ def get_stock_price(symbol):
 def get_stock_news(symbol):
     """Get recent news for a stock - simplified version"""
     try:
-        return f"📰 **Recent News for {symbol.upper()}**\n\nNews functionality temporarily unavailable. Please check financial news websites for the latest updates on {symbol.upper()}."
+        return f"**Recent News for {symbol.upper()}**\n\nNews functionality temporarily unavailable. Please check financial news websites for the latest updates on {symbol.upper()}."
         
     except Exception as e:
         return f"Unable to fetch news for {symbol.upper()}: {str(e)}"
@@ -158,7 +158,7 @@ def get_stock_news(symbol):
 def get_market_summary():
     """Get overall market summary - simplified version"""
     try:
-        return f"📊 **Market Summary**\n\nMarket data functionality temporarily unavailable. Please check financial news websites for current market conditions."
+        return f"**Market Summary**\n\nMarket data functionality temporarily unavailable. Please check financial news websites for current market conditions."
         
     except Exception as e:
         return f"Market data temporarily unavailable: {str(e)}"
@@ -235,13 +235,13 @@ base.init_stock_advisor()
 base.init_slidebar()
 
 # Agent capabilities section
-st.markdown("### 🛠️ Agent Capabilities")
+st.markdown("### Agent Capabilities")
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     st.markdown("""
     <div class="agent-card">
-        <h4>📊 Real-time Data</h4>
+        <h4>Real-time Data</h4>
         <p>Live stock prices, market indices, and trading volumes</p>
     </div>
     """, unsafe_allow_html=True)
@@ -249,7 +249,7 @@ with col1:
 with col2:
     st.markdown("""
     <div class="agent-card">
-        <h4>📰 News Analysis</h4>
+        <h4>News Analysis</h4>
         <p>Latest financial news and market-moving events</p>
     </div>
     """, unsafe_allow_html=True)
@@ -257,7 +257,7 @@ with col2:
 with col3:
     st.markdown("""
     <div class="agent-card">
-        <h4>📈 Technical Analysis</h4>
+        <h4>Technical Analysis</h4>
         <p>Moving averages, volatility, and performance metrics</p>
     </div>
     """, unsafe_allow_html=True)
@@ -265,13 +265,13 @@ with col3:
 with col4:
     st.markdown("""
     <div class="agent-card">
-        <h4>🎯 Smart Insights</h4>
+        <h4>Smart Insights</h4>
         <p>AI-powered analysis and investment recommendations</p>
     </div>
     """, unsafe_allow_html=True)
 
 # Sample queries
-st.markdown("### 💡 Try These Queries")
+st.markdown("### Try These Queries")
 sample_queries = [
     "What's the current price of Apple (AAPL) and recent news?",
     "Analyze Tesla's performance over the last month",
@@ -289,7 +289,7 @@ for i, query in enumerate(sample_queries):
             st.rerun()
 
 # Chat interface
-st.markdown("### 💬 Chat with AI Agent")
+st.markdown("### Chat with AI Agent")
 st.markdown('<div class="chat-container">', unsafe_allow_html=True)
 
 # Display chat messages
@@ -387,4 +387,4 @@ st.markdown('</div>', unsafe_allow_html=True)
 
 # Footer
 st.markdown("---")
-st.markdown("🔧 **Powered by:** AWS Bedrock Claude 3.5 Sonnet | Yahoo Finance API | LangChain Agents")
+st.markdown("**Powered by:** AWS Bedrock Claude 3.5 Sonnet | Yahoo Finance API | LangChain Agents")
