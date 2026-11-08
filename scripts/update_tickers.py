@@ -52,5 +52,5 @@ with open('all_tickers.txt', 'w', encoding='utf-8') as f:
     for ticker in all_tickers:
         f.write(ticker + '\n')
 
-print(f"\n✅ Đã tạo all_tickers.txt với {len(all_tickers)} mã cổ phiếu")
+print(f"\nĐã tạo all_tickers.txt với {len(all_tickers)} mã cổ phiếu")
 print("Format: SYMBOL|COMPANY_NAME|SECTOR|COUNTRY")

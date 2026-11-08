@@ -7,7 +7,7 @@ def generate_response(prompt):
     if base.get_num_tokens(prompt) >= 1000000:
         st.error("Conversation length too long. Please keep it under 1000000 tokens.")
         st.button(
-            "🗑 Clear Chat History",
+            "Clear Chat History",
             on_click=base.clear_chat_history,
             key="clear_chat_history",
         )
@@ -74,7 +74,7 @@ st.markdown("""
 # Header
 st.markdown("""
 <div class="main-header">
-    <h1>💰 Finance Chatbot</h1>
+    <h1>Finance Chatbot</h1>
     <p>Your AI-powered financial analysis assistant</p>
 </div>
 """, unsafe_allow_html=True)
@@ -89,13 +89,13 @@ if len(st.session_state.messages) == 1:
     with col2:
         st.markdown("""
         <div class="feature-card">
-            <h3>🚀 Getting Started</h3>
+            <h3>Getting Started</h3>
             <p>Ask me about:</p>
             <ul>
-                <li>📊 Stock analysis and market trends</li>
-                <li>💹 Investment strategies and portfolio advice</li>
-                <li>📈 Technical analysis and chart patterns</li>
-                <li>💰 Financial planning and risk management</li>
+                <li>Stock analysis and market trends</li>
+                <li>Investment strategies and portfolio advice</li>
+                <li>Technical analysis and chart patterns</li>
+                <li>Financial planning and risk management</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -130,25 +130,25 @@ if st.session_state.messages[-1]["role"] != "assistant":
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Quick actions
-st.markdown("### 🎯 Quick Actions")
+st.markdown("### Quick Actions")
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    if st.button("📈 Market Analysis", use_container_width=True):
+    if st.button("Market Analysis", use_container_width=True):
         st.session_state.messages.append({"role": "user", "content": "Give me a current market analysis"})
         st.rerun()
 
 with col2:
-    if st.button("💹 Stock Picks", use_container_width=True):
+    if st.button("Stock Picks", use_container_width=True):
         st.session_state.messages.append({"role": "user", "content": "Suggest some good stock picks for today"})
         st.rerun()
 
 with col3:
-    if st.button("📊 Portfolio Review", use_container_width=True):
+    if st.button("Portfolio Review", use_container_width=True):
         st.session_state.messages.append({"role": "user", "content": "How should I review my investment portfolio?"})
         st.rerun()
 
 with col4:
-    if st.button("💰 Investment Tips", use_container_width=True):
+    if st.button("Investment Tips", use_container_width=True):
         st.session_state.messages.append({"role": "user", "content": "Give me some investment tips for beginners"})
         st.rerun()

@@ -7,7 +7,7 @@ def generate_response(prompt):
     if base.get_num_tokens(prompt) >= 1000000:
         st.error("Conversation length too long. Please keep it under 1000000 tokens.")
         st.button(
-            "🗑 Clear Chat History",
+            "Clear Chat History",
             on_click=base.clear_stock_advisor,
             key="clear_chat_history",
         )
@@ -87,7 +87,7 @@ st.markdown("""
 # Header
 st.markdown("""
 <div class="main-header">
-    <h1>💹 Stock Information Hub</h1>
+    <h1>Stock Information Hub</h1>
     <p>Get detailed information about any stock or company</p>
 </div>
 """, unsafe_allow_html=True)
@@ -96,7 +96,7 @@ base.init_stock_advisor()
 base.init_slidebar()
 
 # Quick stock lookup section
-st.markdown("### 🔍 Quick Stock Lookup")
+st.markdown("### Quick Stock Lookup")
 col1, col2, col3 = st.columns([2, 2, 1])
 
 with col1:
@@ -113,26 +113,26 @@ with col2:
     ])
 
 with col3:
-    if st.button("🔍 Search", use_container_width=True):
+    if st.button("Search", use_container_width=True):
         if stock_symbol:
             query = f"Provide {query_type.lower()} for {stock_symbol.upper()}"
             st.session_state.messages.append({"role": "user", "content": query})
             st.rerun()
 
 # Popular stocks section
-st.markdown("### 📈 Popular Stocks")
+st.markdown("### Popular Stocks")
 popular_stocks = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "NVDA", "META", "NFLX"]
 
 cols = st.columns(4)
 for i, stock in enumerate(popular_stocks):
     with cols[i % 4]:
-        if st.button(f"📊 {stock}", use_container_width=True):
+        if st.button(f"{stock}", use_container_width=True):
             query = f"Give me a comprehensive overview of {stock} including current price, recent performance, and key metrics"
             st.session_state.messages.append({"role": "user", "content": query})
             st.rerun()
 
 # Chat interface
-st.markdown("### 💬 Stock Information Chat")
+st.markdown("### Stock Information Chat")
 st.markdown('<div class="chat-container">', unsafe_allow_html=True)
 
 # Display chat messages
@@ -158,7 +158,7 @@ if st.session_state.messages[-1]["role"] != "assistant":
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Quick queries section
-st.markdown("### ⚡ Quick Queries")
+st.markdown("### Quick Queries")
 quick_queries = [
     "What are the top performing stocks today?",
     "Show me dividend aristocrats",
@@ -176,13 +176,13 @@ for i, query in enumerate(quick_queries):
             st.rerun()
 
 # Information cards
-st.markdown("### 📚 Stock Analysis Guide")
+st.markdown("### Stock Analysis Guide")
 col1, col2, col3 = st.columns(3)
 
 with col1:
     st.markdown("""
     <div class="info-card">
-        <h4>📊 Fundamental Analysis</h4>
+        <h4>Fundamental Analysis</h4>
         <p>Learn about P/E ratios, revenue growth, debt levels, and other key financial metrics that determine a company's intrinsic value.</p>
     </div>
     """, unsafe_allow_html=True)
@@ -190,7 +190,7 @@ with col1:
 with col2:
     st.markdown("""
     <div class="info-card">
-        <h4>📈 Technical Analysis</h4>
+        <h4>Technical Analysis</h4>
         <p>Understand chart patterns, moving averages, RSI, MACD, and other technical indicators for timing your trades.</p>
     </div>
     """, unsafe_allow_html=True)
@@ -198,7 +198,7 @@ with col2:
 with col3:
     st.markdown("""
     <div class="info-card">
-        <h4>📰 Market News</h4>
+        <h4>Market News</h4>
         <p>Stay updated with earnings reports, analyst upgrades/downgrades, and market-moving news that affects stock prices.</p>
     </div>
     """, unsafe_allow_html=True)

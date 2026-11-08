@@ -61,7 +61,7 @@ st.markdown("""
 # Header
 st.markdown("""
 <div class="main-header">
-    <h1>❓ Document Q&A</h1>
+    <h1>Document Q&A</h1>
     <p>Ask questions about your documents and get AI-powered answers</p>
 </div>
 """, unsafe_allow_html=True)
@@ -75,7 +75,7 @@ if 'qa_history' not in st.session_state:
     st.session_state.qa_history = []
 
 # Document upload section
-st.markdown("### 📤 Upload Document")
+st.markdown("### Upload Document")
 uploaded_file = st.file_uploader(
     "Choose a document to analyze",
     type=['txt', 'pdf', 'docx', 'md', 'py', 'js', 'html', 'css', 'json'],
@@ -124,15 +124,15 @@ if uploaded_file is not None:
         
         if content and content.strip():
             st.session_state.document_content = content
-            st.success(f"✅ Document loaded: {uploaded_file.name}")
+            st.success(f"Document loaded: {uploaded_file.name}")
         else:
-            st.error("❌ Could not extract text from the document. Please try a different file.")
+            st.error("Could not extract text from the document. Please try a different file.")
     except Exception as e:
         st.error(f"Error reading file: {str(e)}")
 
 # Sample document option
 if not st.session_state.document_content:
-    st.markdown("### 📚 Or Try a Sample Document")
+    st.markdown("### Or Try a Sample Document")
     
     sample_doc = st.selectbox("Choose a sample document:", [
         "Select a sample...",
@@ -276,20 +276,20 @@ if not st.session_state.document_content:
     
     if sample_doc != "Select a sample..." and sample_doc in sample_contents:
         st.session_state.document_content = sample_contents[sample_doc]
-        st.success(f"✅ Sample document loaded: {sample_doc}")
+        st.success(f"Sample document loaded: {sample_doc}")
 
 # Q&A Interface
 if st.session_state.document_content:
-    st.markdown("### 💬 Ask Questions About Your Document")
+    st.markdown("### Ask Questions About Your Document")
     
     # Display document preview
-    with st.expander("📄 Document Preview", expanded=False):
+    with st.expander("Document Preview", expanded=False):
         st.markdown('<div class="document-section">', unsafe_allow_html=True)
         st.text_area("Document Content", st.session_state.document_content, height=200, disabled=True)
         st.markdown('</div>', unsafe_allow_html=True)
     
     # Suggested questions
-    st.markdown("### 💡 Suggested Questions")
+    st.markdown("### Suggested Questions")
     suggested_questions = [
         "What are the main points of this document?",
         "What are the key financial metrics mentioned?",
@@ -319,7 +319,7 @@ if st.session_state.document_content:
         key="question_input"
     )
     
-    if st.button("🔍 Get Answer", use_container_width=True) and question:
+    if st.button("Get Answer", use_container_width=True) and question:
         # Process the question
         prompt = f"""
         Based on the following document, please answer this question: "{question}"
@@ -331,7 +331,7 @@ if st.session_state.document_content:
         If the information is not available in the document, please say so.
         """
         
-        with st.spinner("🤔 Analyzing document and generating answer..."):
+        with st.spinner("Analyzing document and generating answer..."):
             try:
                 response = glib.call_claude_sonet_stream(prompt)
                 
@@ -356,7 +356,7 @@ if st.session_state.document_content:
     
     # Display Q&A History
     if st.session_state.qa_history:
-        st.markdown("### 📝 Q&A History")
+        st.markdown("### Q&A History")
         
         for i, qa in enumerate(reversed(st.session_state.qa_history)):
             with st.expander(f"Q: {qa['question']}", expanded=(i == 0)):
@@ -365,7 +365,7 @@ if st.session_state.document_content:
                 st.markdown('</div>', unsafe_allow_html=True)
         
         # Clear history button
-        if st.button("🗑️ Clear Q&A History"):
+        if st.button("Clear Q&A History"):
             st.session_state.qa_history = []
             st.rerun()
 
@@ -373,7 +373,7 @@ else:
     # No document loaded
     st.markdown("""
     <div class="document-section">
-        <h3>📋 How to Use Document Q&A</h3>
+        <h3>How to Use Document Q&A</h3>
         <ol>
             <li><strong>Upload a document</strong> or select a sample document</li>
             <li><strong>Ask questions</strong> about the content using natural language</li>
@@ -381,7 +381,7 @@ else:
             <li><strong>Explore further</strong> with follow-up questions</li>
         </ol>
         
-        <h4>💡 Example Questions You Can Ask:</h4>
+        <h4>Example Questions You Can Ask:</h4>
         <ul>
             <li>"What are the main conclusions?"</li>
             <li>"What numbers or statistics are mentioned?"</li>
@@ -394,4 +394,4 @@ else:
 
 # Footer
 st.markdown("---")
-st.markdown("🔧 **Tip:** Ask specific questions to get more detailed and accurate answers from your documents!")
+st.markdown("**Tip:** Ask specific questions to get more detailed and accurate answers from your documents!")

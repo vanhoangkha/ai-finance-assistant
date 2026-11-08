@@ -41,10 +41,10 @@ def update_tickers():
     with open('all_tickers.txt', 'w') as f:
         f.write('\n'.join(new_tickers))
     
-    print(f"✅ Updated all_tickers.txt")
-    print(f"📊 Top 10 stocks added at the beginning")
-    print(f"📈 Total tickers: {len(new_tickers)}")
-    print(f"🔥 Top 10 US stocks:")
+    print(f"Updated all_tickers.txt")
+    print(f"Top 10 stocks added at the beginning")
+    print(f"Total tickers: {len(new_tickers)}")
+    print(f"Top 10 US stocks:")
     for i, stock in enumerate(TOP_10_STOCKS, 1):
         symbol, name = stock.split('|')[:2]
         print(f"  {i:2d}. {symbol} - {name}")

@@ -56,7 +56,7 @@ st.markdown("""
 # Header
 st.markdown("""
 <div class="main-header">
-    <h1>📄 Document Summary</h1>
+    <h1>Document Summary</h1>
     <p>AI-powered document analysis and summarization</p>
 </div>
 """, unsafe_allow_html=True)
@@ -67,29 +67,29 @@ base.init_slidebar()
 st.markdown("""
 <div class="feature-grid">
     <div class="feature-card">
-        <h3>📝 Smart Summarization</h3>
+        <h3>Smart Summarization</h3>
         <p>Extract key points and main ideas from lengthy documents</p>
     </div>
     <div class="feature-card">
-        <h3>🔍 Key Insights</h3>
+        <h3>Key Insights</h3>
         <p>Identify important themes, trends, and actionable information</p>
     </div>
     <div class="feature-card">
-        <h3>⚡ Quick Processing</h3>
+        <h3>Quick Processing</h3>
         <p>Get summaries in seconds, not hours of reading</p>
     </div>
     <div class="feature-card">
-        <h3>📊 Multiple Formats</h3>
+        <h3>Multiple Formats</h3>
         <p>Support for PDF, TXT, DOCX, and other document types</p>
     </div>
 </div>
 """, unsafe_allow_html=True)
 
 # Document upload section
-st.markdown("### 📤 Upload Document")
+st.markdown("### Upload Document")
 st.markdown("""
 <div class="upload-section">
-    <h4>📁 Choose Your Document</h4>
+    <h4>Choose Your Document</h4>
     <p>Upload a document to get an AI-powered summary</p>
 </div>
 """, unsafe_allow_html=True)
@@ -118,10 +118,10 @@ with col2:
 
 # Process document
 if uploaded_file is not None:
-    st.success(f"✅ File uploaded: {uploaded_file.name}")
+    st.success(f"File uploaded: {uploaded_file.name}")
     
-    if st.button("🚀 Generate Summary", use_container_width=True):
-        with st.spinner("🔄 Processing document..."):
+    if st.button("Generate Summary", use_container_width=True):
+        with st.spinner("Processing document..."):
             try:
                 # Read file content
                 content = None
@@ -154,7 +154,7 @@ if uploaded_file is not None:
                         st.warning("DOCX processing requires python-docx. Please install it or use text files.")
                         content = None
                 else:
-                    st.error("❌ Could not extract text from the document. Please try a different file or format.")
+                    st.error("Could not extract text from the document. Please try a different file or format.")
                 
                 if content and content.strip():
                     # Create summary prompt
@@ -201,7 +201,7 @@ if uploaded_file is not None:
                     # Generate summary using your existing function
                     response = glib.call_claude_sonet_stream(enhanced_prompt)
                     
-                    st.markdown("### 📋 Document Summary")
+                    st.markdown("### Document Summary")
                     st.markdown('<div class="summary-card">', unsafe_allow_html=True)
                     
                     # Display streaming response
@@ -217,11 +217,11 @@ if uploaded_file is not None:
                     # Additional actions
                     col1, col2, col3 = st.columns(3)
                     with col1:
-                        if st.button("📋 Copy Summary"):
+                        if st.button("Copy Summary"):
                             st.success("Summary copied to clipboard!")
                     
                     with col2:
-                        if st.button("💾 Save Summary"):
+                        if st.button("Save Summary"):
                             st.download_button(
                                 "Download Summary",
                                 full_summary,
@@ -230,14 +230,14 @@ if uploaded_file is not None:
                             )
                     
                     with col3:
-                        if st.button("🔄 Regenerate"):
+                        if st.button("Regenerate"):
                             st.rerun()
                             
             except Exception as e:
                 st.error(f"Error processing document: {str(e)}")
 
 # Sample documents section
-st.markdown("### 📚 Try Sample Documents")
+st.markdown("### Try Sample Documents")
 st.markdown("Don't have a document ready? Try these sample texts:")
 
 sample_texts = {
@@ -269,7 +269,7 @@ sample_texts = {
 cols = st.columns(3)
 for i, (title, text) in enumerate(sample_texts.items()):
     with cols[i]:
-        if st.button(f"📄 {title}", use_container_width=True):
+        if st.button(f"{title}", use_container_width=True):
             prompt = f"""
             Please provide a medium-length summary of the following {title.lower()}:
             
@@ -282,7 +282,7 @@ for i, (title, text) in enumerate(sample_texts.items()):
             4. Conclusion/Recommendations (if applicable)
             """
             
-            st.markdown(f"### 📋 Summary: {title}")
+            st.markdown(f"### Summary: {title}")
             st.markdown('<div class="summary-card">', unsafe_allow_html=True)
             
             response = glib.call_claude_sonet_stream(prompt)
@@ -296,12 +296,12 @@ for i, (title, text) in enumerate(sample_texts.items()):
             st.markdown('</div>', unsafe_allow_html=True)
 
 # Tips section
-st.markdown("### 💡 Tips for Better Summaries")
+st.markdown("### Tips for Better Summaries")
 tips_col1, tips_col2 = st.columns(2)
 
 with tips_col1:
     st.markdown("""
-    **📝 Document Preparation:**
+    **Document Preparation:**
     - Ensure text is clear and readable
     - Remove unnecessary formatting
     - Include complete sentences and paragraphs
@@ -309,7 +309,7 @@ with tips_col1:
 
 with tips_col2:
     st.markdown("""
-    **🎯 Summary Optimization:**
+    **Summary Optimization:**
     - Choose appropriate length for your needs
     - Select relevant focus area
     - Review and refine as needed

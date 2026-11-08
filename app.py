@@ -20,30 +20,30 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 with st.sidebar:
-    st.title("📈 Stock Assistant")
+    st.title("Stock Assistant")
     
     page = st.radio(
         "",
         [
-            "💬 Chat",
-            "📈 Technical Analysis",
-            "💹 Stock Information", 
-            "🤖 AI Assistant",
-            "📄 Document Summary",
-            "❓ Document Q&A"
+            "Chat",
+            "Technical Analysis",
+            "Stock Information", 
+            "AI Assistant",
+            "Document Summary",
+            "Document Q&A"
         ],
         label_visibility="collapsed"
     )
 
-if page == "💬 Chat":
+if page == "Chat":
     exec(open("pages/chat.py").read())
-elif page == "📈 Technical Analysis":
+elif page == "Technical Analysis":
     exec(open("pages/technical_analysis.py").read())
-elif page == "💹 Stock Information":
+elif page == "Stock Information":
     exec(open("pages/stock_info.py").read())
-elif page == "🤖 AI Assistant":
+elif page == "AI Assistant":
     exec(open("pages/ai_assistant.py").read())
-elif page == "📄 Document Summary":
+elif page == "Document Summary":
     exec(open("pages/doc_summary.py").read())
-elif page == "❓ Document Q&A":
+elif page == "Document Q&A":
     exec(open("pages/document_qa.py").read())

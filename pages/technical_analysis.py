@@ -49,7 +49,7 @@ st.markdown("""
 # Header
 st.markdown("""
 <div class="main-header">
-    <h1>📈 Technical Analysis</h1>
+    <h1>Technical Analysis</h1>
     <p>Advanced stock technical analysis and charting</p>
 </div>
 """, unsafe_allow_html=True)
@@ -83,7 +83,7 @@ all_tickers = load_tickers()
 symbols = [t["symbol"] for t in all_tickers]
 
 # Sidebar controls
-st.sidebar.markdown("### 🎛️ Analysis Controls")
+st.sidebar.markdown("### Analysis Controls")
 
 # Create ticker options with names - prioritize US stocks
 us_tickers = []
@@ -242,7 +242,7 @@ def calculate_technical_indicators(df):
 def plot_technical_chart(df, ticker):
     """Create comprehensive technical analysis charts"""
     # Create multiple chart tabs
-    tab1, tab2, tab3, tab4 = st.tabs(["📈 Price & Overlays", "📊 Momentum", "📉 Volatility", "📦 Volume"])
+    tab1, tab2, tab3, tab4 = st.tabs(["Price & Overlays", "Momentum", "Volatility", "Volume"])
     
     with tab1:
         # Price Action Chart
@@ -386,7 +386,7 @@ def plot_technical_chart(df, ticker):
             fig4.update_layout(height=600, showlegend=True, title_text=f"Volume Analysis - {ticker}")
             st.plotly_chart(fig4, use_container_width=True)
         else:
-            st.warning("📦 Volume data not available for this ticker")
+            st.warning("Volume data not available for this ticker")
     
     return None
 
@@ -444,7 +444,7 @@ if ticker:
         if analysis_type == 'Technical Analysis':
             # Technical Analysis Section
             st.markdown('<div class="analysis-section">', unsafe_allow_html=True)
-            st.markdown("### 📊 Technical Analysis Dashboard")
+            st.markdown("### Technical Analysis Dashboard")
             
             # Display comprehensive technical charts
             plot_technical_chart(df, ticker)
@@ -453,57 +453,57 @@ if ticker:
             col1, col2, col3 = st.columns(3)
             
             with col1:
-                st.markdown("#### 📈 Moving Averages")
+                st.markdown("#### Moving Averages")
                 sma_20 = df['SMA_20'].iloc[-1]
                 sma_50 = df['SMA_50'].iloc[-1]
                 
                 if current_price > sma_20:
-                    st.success(f"✅ Price above SMA 20: ${sma_20:.2f}")
+                    st.success(f"Price above SMA 20: ${sma_20:.2f}")
                     sma_20_signal = "BULLISH"
                 else:
-                    st.warning(f"⚠️ Price below SMA 20: ${sma_20:.2f}")
+                    st.warning(f"Price below SMA 20: ${sma_20:.2f}")
                     sma_20_signal = "BEARISH"
                 
                 if current_price > sma_50:
-                    st.success(f"✅ Price above SMA 50: ${sma_50:.2f}")
+                    st.success(f"Price above SMA 50: ${sma_50:.2f}")
                     sma_50_signal = "BULLISH"
                 else:
-                    st.warning(f"⚠️ Price below SMA 50: ${sma_50:.2f}")
+                    st.warning(f"Price below SMA 50: ${sma_50:.2f}")
                     sma_50_signal = "BEARISH"
                 
                 # Golden Cross / Death Cross
                 if sma_20 > sma_50:
-                    st.info("🟡 Golden Cross Pattern")
+                    st.info("Golden Cross Pattern")
                 else:
-                    st.error("🔴 Death Cross Pattern")
+                    st.error("Death Cross Pattern")
             
             with col2:
-                st.markdown("#### 📊 Momentum Indicators")
+                st.markdown("#### Momentum Indicators")
                 rsi = df['RSI'].iloc[-1]
                 macd = df['MACD'].iloc[-1]
                 macd_signal = df['MACD_Signal'].iloc[-1]
                 
                 # RSI Analysis
                 if rsi > 70:
-                    st.warning(f"🔴 RSI: {rsi:.2f} (Overbought)")
+                    st.warning(f"RSI: {rsi:.2f} (Overbought)")
                     rsi_signal = "SELL"
                 elif rsi < 30:
-                    st.success(f"🟢 RSI: {rsi:.2f} (Oversold)")
+                    st.success(f"RSI: {rsi:.2f} (Oversold)")
                     rsi_signal = "BUY"
                 else:
-                    st.info(f"🟡 RSI: {rsi:.2f} (Neutral)")
+                    st.info(f"RSI: {rsi:.2f} (Neutral)")
                     rsi_signal = "HOLD"
                 
                 # MACD Analysis
                 if macd > macd_signal:
-                    st.success(f"🟢 MACD: {macd:.4f} (Bullish)")
+                    st.success(f"MACD: {macd:.4f} (Bullish)")
                     macd_signal_trend = "BULLISH"
                 else:
-                    st.warning(f"🔴 MACD: {macd:.4f} (Bearish)")
+                    st.warning(f"MACD: {macd:.4f} (Bearish)")
                     macd_signal_trend = "BEARISH"
             
             with col3:
-                st.markdown("#### 🎯 Trading Signals")
+                st.markdown("#### Trading Signals")
                 
                 # Overall Signal Calculation
                 signals = []
@@ -523,23 +523,23 @@ if ticker:
                 overall_score = sum(signals)
                 
                 if overall_score >= 2:
-                    st.success("🚀 **STRONG BUY**")
+                    st.success("**STRONG BUY**")
                     st.success(f"Signal Score: {overall_score}/4")
                 elif overall_score == 1:
-                    st.info("📈 **BUY**")
+                    st.info("**BUY**")
                     st.info(f"Signal Score: {overall_score}/4")
                 elif overall_score == 0:
-                    st.warning("⏸️ **HOLD**")
+                    st.warning("**HOLD**")
                     st.warning(f"Signal Score: {overall_score}/4")
                 elif overall_score == -1:
-                    st.warning("📉 **SELL**")
+                    st.warning("**SELL**")
                     st.warning(f"Signal Score: {overall_score}/4")
                 else:
-                    st.error("💥 **STRONG SELL**")
+                    st.error("**STRONG SELL**")
                     st.error(f"Signal Score: {overall_score}/4")
                 
                 # Support & Resistance Levels
-                st.markdown("#### 📏 Key Levels")
+                st.markdown("#### Key Levels")
                 recent_high = df['High'].tail(20).max()
                 recent_low = df['Low'].tail(20).min()
                 
@@ -554,7 +554,7 @@ if ticker:
                 st.write(f"Distance from Support: {support_distance:.1f}%")
             
             # AI Analysis Section using Bedrock
-            st.markdown("### 🤖 AI Technical Analysis")
+            st.markdown("### AI Technical Analysis")
             
             # Safe formatting for indicators
             rsi_str = f"{rsi:.2f}" if rsi is not None else "N/A"
@@ -586,13 +586,13 @@ if ticker:
             Use professional financial terminology and provide actionable insights for traders.
             """
             
-            if st.button("🔍 Generate AI Analysis", use_container_width=True):
-                with st.spinner("🤖 AI đang phân tích kỹ thuật..."):
+            if st.button("Generate AI Analysis", use_container_width=True):
+                with st.spinner("AI đang phân tích kỹ thuật..."):
                     try:
                         import libs as glib
                         response = glib.call_claude_sonet_stream(ai_prompt)
                         
-                        st.markdown("#### 🎯 Phân Tích Kỹ Thuật AI")
+                        st.markdown("#### Phân Tích Kỹ Thuật AI")
                         analysis_placeholder = st.empty()
                         full_analysis = ""
                         
@@ -608,13 +608,13 @@ if ticker:
         else:
             # Fundamental Analysis Section
             st.markdown('<div class="analysis-section">', unsafe_allow_html=True)
-            st.markdown("### 💼 Fundamental Analysis")
+            st.markdown("### Fundamental Analysis")
             
             if stock_info:
                 col1, col2, col3 = st.columns(3)
                 
                 with col1:
-                    st.markdown("#### 🏢 Company Information")
+                    st.markdown("#### Company Information")
                     st.write(f"**Company:** {stock_info.get('longName', 'N/A')}")
                     st.write(f"**Sector:** {stock_info.get('sector', 'N/A')}")
                     st.write(f"**Industry:** {stock_info.get('industry', 'N/A')}")
@@ -623,7 +623,7 @@ if ticker:
                         st.write(f"**Employees:** {stock_info.get('employees'):,}")
                 
                 with col2:
-                    st.markdown("#### 📊 Key Ratios")
+                    st.markdown("#### Key Ratios")
                     pe_ratio = stock_info.get('trailingPE', 'N/A')
                     if pe_ratio != 'N/A' and pe_ratio:
                         st.write(f"**P/E Ratio:** {pe_ratio:.2f}")
@@ -649,7 +649,7 @@ if ticker:
                         st.write("**Beta:** N/A")
                 
                 with col3:
-                    st.markdown("#### 💰 Market Data")
+                    st.markdown("#### Market Data")
                     market_cap = stock_info.get('marketCap', 0)
                     if market_cap and market_cap > 0:
                         if market_cap >= 1e12:
@@ -675,7 +675,7 @@ if ticker:
                         high_52w = df['High'].tail(252).max() if len(df) >= 252 else df['High'].max()
                         low_52w = df['Low'].tail(252).min() if len(df) >= 252 else df['Low'].min()
                         
-                        st.markdown("#### 📈 Price Analysis")
+                        st.markdown("#### Price Analysis")
                         st.write(f"**Current Price:** ${current_price:.2f}")
                         st.write(f"**52W High:** ${high_52w:.2f}")
                         st.write(f"**52W Low:** ${low_52w:.2f}")
@@ -685,13 +685,13 @@ if ticker:
                         pct_from_low = ((current_price - low_52w) / low_52w) * 100
                         
                         if pct_from_high >= -5:
-                            st.success(f"📈 Near 52W High ({pct_from_high:+.1f}%)")
+                            st.success(f"Near 52W High ({pct_from_high:+.1f}%)")
                         elif pct_from_low <= 5:
-                            st.error(f"📉 Near 52W Low ({pct_from_low:+.1f}%)")
+                            st.error(f"Near 52W Low ({pct_from_low:+.1f}%)")
                         else:
-                            st.info(f"📊 {pct_from_high:+.1f}% from High, {pct_from_low:+.1f}% from Low")
+                            st.info(f"{pct_from_high:+.1f}% from High, {pct_from_low:+.1f}% from Low")
             else:
-                st.warning("⚠️ Fundamental data not available for this ticker")
+                st.warning("Fundamental data not available for this ticker")
             
             st.markdown('</div>', unsafe_allow_html=True)
     
@@ -700,4 +700,4 @@ if ticker:
 
 # Footer
 st.markdown("---")
-st.markdown("💡 **Tip:** Use the sidebar to change analysis parameters and explore different stocks!")
+st.markdown("**Tip:** Use the sidebar to change analysis parameters and explore different stocks!")
